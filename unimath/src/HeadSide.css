@@ -1,0 +1,184 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+a{
+    text-decoration: none;
+}
+
+#content-overlay{
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:2;
+    background:rgb(0, 0, 0);
+    opacity: 0;
+    transition: ease 0.5s;
+    transition-delay: 0.2s;
+}
+.header{
+    position: absolute;
+    width: 100%;
+    min-height: 63px;
+    background-color: #282c34;
+    color: white;
+    text-decoration: none;
+    overflow: hidden;
+    top:0;
+    z-index: 99;
+}
+
+.sidebar{
+    position:relative;
+    z-index: 99;
+    top:63px;
+}
+
+.hamburger{
+    position:absolute;
+    top:0px;
+    left:0px;
+    display: none;
+    padding: 12px 20px 12px 12px;
+    color: white;
+}
+
+.hamburger div{
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+}
+
+.hamburger-nav{
+    display:none;
+    position: absolute;
+    top:0;
+    right:0;
+    padding: 0px 20px 0px 12px;
+    color: white;
+}
+
+.header ul li{
+    list-style: none;
+    text-decoration: none;
+    float: left;
+}
+
+.headerList{
+    padding: 0px 15px 0px 15px;
+    line-height: 63px;
+    font-size: 20px;
+    float: left;
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.headerList:hover{
+    text-decoration: none;
+    background-color: #393c44;
+    color:inherit;
+}
+
+.headerList2{
+    display: none;
+    padding: 0px 15px 0px 15px;
+    line-height: 63px;
+    font-size: 20px;
+    text-decoration: none;
+    color: whitesmoke;
+    background-color: #282c34;
+    z-index: 99;
+}
+
+.headerList2 a:hover{
+    background-color: #393c44;
+    transition:0.5s;
+}
+
+.sidebar {
+    position: absolute;
+    height: calc(100% - 63px); /* Full-height: remove this if you want "auto" height */
+    width: 0px; /* Set the width of the sidebar */
+    left: 0;
+    background-color: white;
+    transition: 0.5s;
+    z-index: 3;
+    overflow-x: hidden; /* Disable horizontal scroll */
+}
+
+.sidebar h1{
+    padding: 12px;
+    font-size: 24px;
+}
+.sidebarItems-1{
+    padding: 5px 8px 5px 8px;
+    text-align: left;
+    text-decoration: none;
+    margin:auto;
+    
+    color: rgb(99, 99, 99);
+    
+}
+
+.sidebarItems-1 a:hover{
+    color: #ff0000;
+    text-decoration: none;
+}
+
+.sidebarItems-2{
+    padding: 0px 8px 0px 20px;
+    line-height: 30px;
+    margin:auto;
+    text-decoration: none;
+    color: rgb(99, 99, 99);
+    text-align: left;
+}
+.sidebarItems-2 a{
+    line-height: 30px;
+    font-size: 16px;
+}
+
+@media screen and (min-width: 992px){
+    .sidebar{
+        width:250px;
+    }
+}
+
+@media screen and (max-width: 992px){
+    .hamburger-nav{
+        display: block;
+        line-height: 63px;
+    }
+
+    .hamburger{
+        display: block;
+        width:40px;
+        padding: 12px;
+    }
+    .headerList{
+        display: none;
+    }
+
+    .headerList2{
+        position: absolute;
+        top:-50%;
+        padding: 0px;
+        transition: all ease 0.5s ;
+        z-index: 98;
+        display:block;
+        width:100%;
+    }
+    .headerList2 a{
+        font-size: 20px;
+        float:none;
+        display:block;
+        text-decoration: none;
+        color: whitesmoke;
+        z-index: 98;
+    }
+
+}
